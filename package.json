@@ -1,8 +1,8 @@
 {
   "name": "lloop",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A React JSX Loop component with the lloopy name.",
-  "main": "./lib/Loop.jsx",
+  "main": "./lib/Loop.js",
   "scripts": {
     "prepublish": "npm run lint && npm run _build && npm run _test",
     "build": "npm run lint && npm run _build",

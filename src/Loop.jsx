@@ -19,7 +19,6 @@ Loop.propTypes = {
   primaryKey: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   type: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  render: PropTypes.func.isRequired,
 };
 
 Loop.defaultProps = {

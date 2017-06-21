@@ -5,11 +5,11 @@ between JSX and JavaScript.
 
 ![this might be a llama](https://github.com/donavon/lloop/blob/master/img/llama-small.png?raw=true)
 
-(this might be a llama)
+(this might be a llama. his name is lloyd)
 
 ## How do I get it?
 
-LLet's quickly get this out of the way. How do I get your aweome code?
+Llet's quickly get this out of the way. How do I get your aweome code?
 
 ```sh
 $ npm i --save lloop
@@ -63,8 +63,8 @@ Both render the exact same HTML which might look something like this:
 
 ## What `props` can/must I pass to `Loop`?
 
-| prop       | description |
+| Prop Name  | Description |
 | ---------- | ----------- |
 | items      | An array of items to render (required) |
 | primaryKey | Name of the unique key for the array. If there is no unique key, set to `null` and the index of the item will be passed to React as the `key` (not recommended). |
-| type       | The type of tag to use as the wrapped component. Defaults to a `<ul>`. This may also be the name of a component or class. Example `type={MyItems}`.
+| type       | The type of tag to use as the wrapped component. Defaults to a `<ul>`. This may also be the name of a component or class. Example `type={MyList}`.
