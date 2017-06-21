@@ -33,9 +33,11 @@ Traditionally you might go about this using `map`, something llike this:
 
 ```js
 <ul>
-  {users.map(user => {
-    return <User key={user.name} {...user} />;
-  })}
+  {
+    users.map(user => {
+      return <User key={user.name} {...user} />;
+    })
+  }
 </ul>
 ```
 
@@ -61,6 +63,8 @@ example above, but it does so automatically, reducing visual clutter for a clean
 Both render the exact same HTML which might look something like this:
 
 ![simpsons screen shot](https://raw.githubusercontent.com/donavon/lloop/master/img/lloop-screen-shot.png)
+
+(see the code running live in this [codesandbox](https://codesandbox.io/s/ZkLVy722))
 
 ## What `props` can/must I pass to `Loop`?
 
