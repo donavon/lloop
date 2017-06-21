@@ -41,7 +41,8 @@ Traditionally you might go about this using `map`, something llike this:
 
 The `User` component would receive the following props:
 `name`, `sex`, `age`, and `imgUrl`.
-It's the way we've always done it.
+You find yourself popping in and out of JSX, making the code cumbersome to read.
+But it's the way we've always done it.
 
 ## But is there a better way?
 
@@ -65,6 +66,17 @@ Both render the exact same HTML which might look something like this:
 
 | Prop Name  | Description |
 | ---------- | ----------- |
-| items      | An array of items to render (required) |
-| primaryKey | Name of the unique key for the array. If there is no unique key, set to `null` and the index of the item will be passed to React as the `key` (not recommended). |
-| type       | The type of tag to use as the wrapped component. Defaults to a `<ul>`. This may also be the name of a component or class. Example `type={MyList}`.
+| `items`      | An array of items to render (required) |
+| `primaryKey` | Name of the unique key for the array. If there is no unique key, set to `null` and the index of the item will be passed to React as the `key`. So while it is not required, it is recommended that you pass a `primaryKey`. |
+| `type`       | The type of tag to use as the wrapped component. Defaults to a `<ul>`. This may also be the name of a component or class. Example `type={MyList}`. |
+
+Any other props passed to `Loop` will be passed on to the wrapping element. For example:
+```html
+<Loop items={users} className="foo">
+  ...
+```
+will produce
+```html
+<ul class="foo">
+  ...
+```
