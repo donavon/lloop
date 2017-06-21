@@ -1,6 +1,6 @@
 # lloop
 A React JSX `<Loop />` component with the lloopy name.
-It allows you to specify some markup to loop through without switching back and forth
+It allows you to iterate through an array of items and render markup without switching context back and forth
 between JSX and JavaScript.
 
 ![this might be a llama](https://github.com/donavon/lloop/blob/master/img/llama-small.png?raw=true)
@@ -9,7 +9,7 @@ between JSX and JavaScript.
 
 ## How do I get it?
 
-Llet's quickly get this out of the way. How do I get your aweome code?
+Let's quickly get this out of the way. How do I get your aweome code?
 
 ```sh
 $ npm i --save lloop
@@ -43,13 +43,13 @@ Traditionally you might go about this using `map`, something llike this:
 
 The `User` component would receive the following props:
 `name`, `sex`, `age`, and `imgUrl`.
-You find yourself popping in and out of JSX, making the code cumbersome to read.
-But it's the way we've always done it.
+You find yourself context switching in and out of JSX, making the code cumbersome to read that stright markup.
+But it's the way we've always done it, so it must be right.
 
 ## But is there a better way?
 
-Lloop can accomplish the same thing without context switching
-between JSX and JavaScript, and with only 3 llines of code.
+Lloop can accomplish the same thing without popping
+between JSX and JavaScript.
 
 ```js
 <Loop items={users} primaryKey="name">
@@ -58,7 +58,7 @@ between JSX and JavaScript, and with only 3 llines of code.
 ```
 
 `Loop` automatically attaches the same props (one for each object key) that we passed in the JavaScript `map`
-example above, but it does so automatically, reducing visual clutter for a cleaner code.
+example above, but it does so automatically, like magic, reducing visual clutter for a cleaner code.
 
 Both render the exact same HTML which might look something like this:
 
