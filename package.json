@@ -1,6 +1,6 @@
 {
   "name": "lloop",
-  "version": "0.1.3",
+  "version": "0.2.1",
   "description": "A React JSX Loop component with the lloopy name.",
   "main": "./lib/Loop.js",
   "scripts": {

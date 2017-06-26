@@ -72,7 +72,10 @@ Both render the exact same HTML which might look something like this:
 | ---------- | ----------- |
 | `items`      | An array of items to render (required) |
 | `primaryKey` | Name of the unique key for the array. If there is no unique key, set to `null` and the index of the item will be passed to React as the `key`. So while it is not required, it is recommended that you pass a `primaryKey`. |
-| `type`       | The type of tag to use as the wrapped component. Defaults to a `<ul>`. This may also be the name of a component or class. Example `type={MyList}`. |
+| `as`       | The type of tag to use as the wrapped component. Defaults to `as="ul"`. This may also be the name of a component or class. Example `as={MyList}`. |
+| itemKey | The prop to use if `destructure` is true. Defaults to `item`.  |
+| indexKey | The prop to pass the loop index. Defaults to `index`. |
+| destructure | If set to true, each item will be destructured and passed as an individual prop (i.e. `{...item}`). If false, the item is passed as the prop defined by `itemKey` (i.e. `item={item}`). Defaults to true. |
 
 Any other props passed to `Loop` will be passed on to the wrapping element. For example:
 ```html
@@ -84,3 +87,33 @@ will produce
 <ul class="foo">
   ...
 ```
+
+## Shortcuts
+
+Because we realize that there are several distinct use case for looping, we've created these shortcuts.
+
+```js
+import { SimpleLoop } from 'lloop';
+...
+<SimpleLoop />
+```
+which is functionally equivalent to
+```js
+<Loop destructure={false} itemKey="children" />
+```
+
+and
+
+```js
+import { ItemLoop } from 'lloop';
+...
+<ItemLoop />
+```
+which is functionally equivalent to
+```js
+<Loop destructure={false} />
+```
+
+## Live Example
+
+You can see an extensive live example running here on [codesandbox](https://codesandbox.io/s/73zLr4Blr).
