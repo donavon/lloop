@@ -28,7 +28,7 @@ export const Loop = ({ items, primaryKey, destructure, indexKey, itemKey, childr
 };
 
 Loop.propTypes = {
-  items: React.PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.string])).isRequired,
+  items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.string])).isRequired,
   primaryKey: PropTypes.string,
   itemKey: PropTypes.string,
   indexKey: PropTypes.string,
