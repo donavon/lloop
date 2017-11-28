@@ -1,10 +1,10 @@
 {
   "name": "lloop",
-  "version": "0.2.1",
+  "version": "1.0.0-beta.4",
   "description": "A React JSX Loop component with the lloopy name.",
-  "main": "./lib/Loop.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "prepublish": "npm run lint && npm run _build && npm run _test",
+    "prepublishOnly": "npm run lint && npm run _build && npm run _test",
     "build": "npm run lint && npm run _build",
     "_build": "babel src --out-dir lib",
     "test": "npm run lint && npm run _test",
@@ -21,28 +21,29 @@
     "component",
     "loop"
   ],
-  "author": "Donavon West <donavon@github.com> (http://donavon.com)",
+  "author": "Donavon West <github@donavon.com> (http://donavon.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/donavon/lloop/issues"
   },
   "homepage": "https://github.com/donavon/lloop#readme",
   "peerDependencies": {
-    "react": "^15.0.0",
-    "prop-types": "^15.0.0"
+    "react": ">=15.0.0",
+    "prop-types": ">=15.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
-    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-react": "^7.0.1",
-    "prop-types": "^15.5.10",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "eslint-plugin-react": "^7.5.1",
+    "prop-types": "^15.6.0",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
   }
 }
